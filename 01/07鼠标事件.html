@@ -13,12 +13,21 @@
       .ol-zoomslider {
         top: 8em;
       }
+      #map {
+        position: relative;
+      }
+      .btn {
+        position: fixed;
+        left: 5em;
+        right: 5em;
+        z-index: 10;
+      }
     </style>
     <script src="https://cdn.bootcdn.net/ajax/libs/ol3/4.6.5/ol.js"></script>
   </head>
   <body>
     <div id="map"></div>
-
+    <button class="btn">复位</button>
     <script>
       const gaode = new ol.layer.Tile({
         title: "高德地图",
@@ -80,6 +89,19 @@
           geometry: new ol.geom.Point(coordinate),
         });
         vectorSource.addFeature(point);
+
+        // 实现飞行视角
+
+        const view = map.getView();
+        view.animate({
+          center: coordinate,
+        });
+      });
+
+      document.querySelector(".btn").addEventListener("click", () => {
+        map.getView().animate({
+          center: [12914838.35, 4814529.9],
+        });
       });
     </script>
   </body>
