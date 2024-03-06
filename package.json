@@ -12,7 +12,7 @@
     "autoprefixer": "^10.4.18",
     "echarts": "5.2.1",
     "ol": "^6.15.1",
-    "ol-echarts": "2",
+    "ol-echarts": "^4.0.0",
     "postcss": "^8.4.35",
     "reset-css": "^5.0.2",
     "sass": "^1.71.1",
