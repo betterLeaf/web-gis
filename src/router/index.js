@@ -32,6 +32,11 @@ const routes = [
         name: "area",
         component: () => import("../views/area.vue"),
       },
+      {
+        path: "/openlayers/geojson",
+        name: "geojson",
+        component: () => import("../views/geojson/index.vue"),
+      },
     ],
   },
 ];
