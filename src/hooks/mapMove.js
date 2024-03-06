@@ -81,6 +81,14 @@ export default function useMapMove() {
     view.setCenter(fromLonLat([114.36, 35.93]));
     map.render();
   }
+
+  function moveToXLB(map) {
+    var view = map.getView();
+    view.setZoom(12);
+    view.setCenter(fromLonLat([112.85, 34.57]));
+    map.render();
+  }
+
   function moveToInit(map) {
     var view = map.getView();
     view.setZoom(4);
@@ -97,5 +105,6 @@ export default function useMapMove() {
     moveToOut,
     moveToInit,
     moveToHome,
+    moveToXLB,
   };
 }

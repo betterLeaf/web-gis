@@ -10,11 +10,14 @@
             <button class="btn flex-[50%] btn-outline btn-accent  btn-sm" @click="btnClick('Down')">下移</button>
 
 
-            <button class="btn flex-[50%] mb-5 btn-sm btn-neutral" @click="btnClick('ChengDu')">成都</button>
-            <button class="btn flex-[50%] mb-5 btn-sm" @click="btnClick('Home')">回家</button>
+
             <button class="btn flex-[50%] mb-5 btn-sm btn-accent" @click="btnClick('Init')">重置</button>
             <button class="btn flex-[50%] mb-5 btn-sm btn-primary" @click="btnClick('In')">放大</button>
             <button class="btn flex-[50%] mb-5 btn-sm btn-secondary" @click="btnClick('Out')">缩小</button>
+            <button class="btn flex-[50%] mb-5 btn-sm btn-neutral" @click="btnClick('ChengDu')">成都</button>
+            <button class="btn flex-[50%] mb-5 btn-sm" @click="btnClick('Home')">回家</button>
+            <button class="btn flex-[50%] mb-5 btn-sm bg-pink-400" @click="btnClick('XLB')">兰总</button>
+
 
         </div>
     </div>
