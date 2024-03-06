@@ -73,6 +73,14 @@ export default function useMapMove() {
     view.setCenter(fromLonLat([104.07, 30.67]));
     map.render();
   }
+
+  function moveToHome(map) {
+    var view = map.getView();
+    // 设置地图中心为成都的坐标，即可让地图移动到成都
+    view.setZoom(12);
+    view.setCenter(fromLonLat([114.36, 35.93]));
+    map.render();
+  }
   function moveToInit(map) {
     var view = map.getView();
     view.setZoom(4);
@@ -88,5 +96,6 @@ export default function useMapMove() {
     moveToIn,
     moveToOut,
     moveToInit,
+    moveToHome,
   };
 }

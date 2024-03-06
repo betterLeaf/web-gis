@@ -3,14 +3,15 @@
         <div id="Map" ref="map" class="map"></div>
         <div
             class="w-[180px] btns absolute left-[20px] top-[50%] translate-y-[-50%]  bg-white flex flex-wrap space-between p-4 rounded ">
-            <button class="btn flex-[50%] btn-outline mb-5 btn-sm" size="mini" mini
+            <button class="btn  flex-[48%] btn-outline mb-5 btn-sm" size="mini" mini
                 @click="btnClick('Left')">左移</button>
-            <button class="btn flex-[50%] btn-outline btn-primary mb-5 btn-sm" @click="btnClick('Right')">右移</button>
+            <button class="btn flex-[48%] btn-outline btn-primary mb-5 btn-sm" @click="btnClick('Right')">右移</button>
             <button class="btn flex-[50%] btn-outline btn-secondary mb-5 btn-sm" @click="btnClick('Up')">上移</button>
             <button class="btn flex-[50%] btn-outline btn-accent  btn-sm" @click="btnClick('Down')">下移</button>
 
 
             <button class="btn flex-[50%] mb-5 btn-sm btn-neutral" @click="btnClick('ChengDu')">成都</button>
+            <button class="btn flex-[50%] mb-5 btn-sm" @click="btnClick('Home')">回家</button>
             <button class="btn flex-[50%] mb-5 btn-sm btn-accent" @click="btnClick('Init')">重置</button>
             <button class="btn flex-[50%] mb-5 btn-sm btn-primary" @click="btnClick('In')">放大</button>
             <button class="btn flex-[50%] mb-5 btn-sm btn-secondary" @click="btnClick('Out')">缩小</button>
