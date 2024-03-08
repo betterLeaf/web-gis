@@ -1,7 +1,11 @@
 {
   "cSpell.words": [
+    "basecolor",
     "echarts",
     "gaode",
+    "gltf",
+    "GLTFLoader",
+    "metalness",
     "openlayers"
   ]
 }

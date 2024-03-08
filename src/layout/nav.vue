@@ -1,15 +1,16 @@
 <template>
-    <div class="left bg-base-200 w-56 h-[100vh]">
+    <div class="left bg-base-200 w-56 h-[100vh] fixed z-50">
         <ul class="menu  rounded-box">
             <li>
                 <router-link to="/">Home</router-link>
             </li>
-            <li v-for="(item, index) in routerArr">
+            <li v-for="(item, index) in routerArr" :key="index">
                 <details>
                     <summary>{{ item.name }}</summary>
                     <ul>
-                        <li v-for="(cItem, cIndex) in item.children"><router-link :to="cItem.path">{{ cItem.name
-                                }}</router-link></li>
+                        <li v-for="(cItem, cIndex) in item.children" :key="cIndex"><router-link :to="cItem.path">{{
+                cItem.name
+            }}</router-link></li>
                     </ul>
                 </details>
             </li>
@@ -47,6 +48,20 @@ let routerArr = reactive([
                 name: "地图轨迹",
                 path: "/openlayers/path"
             }
+        ]
+    },
+
+    {
+        name: "three",
+        children: [
+            {
+                name: "Demo1",
+                path: "/three/demo1"
+            },
+            {
+                name: "phone",
+                path: "/three/phone"
+            },
         ]
     }
 ])

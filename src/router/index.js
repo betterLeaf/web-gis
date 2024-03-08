@@ -5,7 +5,23 @@ const routes = [
     name: "HelloWorld",
     component: () => import("../components/HelloWorld.vue"),
   },
-
+  {
+    path: "/three",
+    name: "three",
+    redirect: "/three/demo1",
+    children: [
+      {
+        path: "/three/demo1",
+        name: "three-demo1",
+        component: () => import("../views/three/demo1.vue"),
+      },
+      {
+        path: "/three/phone",
+        name: "three-phone",
+        component: () => import("../views/three/phone.vue"),
+      }
+    ]
+  },
   {
     path: "/openlayers",
     name: "openlayers",
