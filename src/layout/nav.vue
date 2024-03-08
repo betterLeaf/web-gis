@@ -36,8 +36,16 @@ let routerArr = reactive([
                 path: "/openlayers/area"
             },
             {
+                name: "省份高亮",
+                path: "/openlayers/province"
+            },
+            {
                 name: "geojson",
                 path: "/openlayers/geojson"
+            },
+            {
+                name: "地图轨迹",
+                path: "/openlayers/path"
             }
         ]
     }

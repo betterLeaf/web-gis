@@ -19,12 +19,12 @@ const routes = [
       },
       {
         path: "/openlayers/echartsline",
-        name: "echartsline",
+        name: "echarts-line",
         component: () => import("../views/echartsLine.vue"),
       },
       {
         path: "/openlayers/echartsline2",
-        name: "echartsline2",
+        name: "echarts-line2",
         component: () => import("../views/echartsLine2.vue"),
       },
       {
@@ -37,6 +37,17 @@ const routes = [
         name: "geojson",
         component: () => import("../views/geojson/index.vue"),
       },
+      {
+        path: "/openlayers/province",
+        name: "province",
+        component: () => import("../views/province.vue"),
+      },
+      {
+        path: "/openlayers/path",
+        name: "path",
+        component: () => import("../views/path.vue"),
+      },
+      
     ],
   },
 ];

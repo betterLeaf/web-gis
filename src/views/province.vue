@@ -74,14 +74,12 @@ export default {
                     g.features[12],
                     g.features[22],
                     g.features[30],
-                    g.features[2],
-                    g.features[3],
                     g.features[1],
                     g.features[4],
                     g.features[5],
                     g.features[16],
                 ];
-                g.features.forEach((item, index) => {
+                lightArr.forEach((item, index) => {
                     let lineData3 = item;
                     let routeFeature3 = "";
                     if (lineData3.geometry.type == "MultiPolygon") {
@@ -97,22 +95,22 @@ export default {
                     }
                     routeFeature3.setStyle(
                         new Style({
-                            // fill: new Fill({
-                            //     //填充颜色
-                            //     color: this.colorList[index].fillColor,
-                            // }),
-                            // stroke: new Stroke({
-                            //     //边界宽度
-                            //     width: 3,
-                            //     //边界颜色
-                            //     color: this.colorList[index].strokeColor,
-                            // }),
-
-                            fill: new Fill({ color: "#4e98f444" }),
+                            fill: new Fill({
+                                //填充颜色
+                                color: this.colorList[index].fillColor,
+                            }),
                             stroke: new Stroke({
+                                //边界宽度
                                 width: 3,
-                                color: [71, 137, 227, 1]
-                            })
+                                //边界颜色
+                                color: this.colorList[index].strokeColor,
+                            }),
+
+                            // fill: new Fill({ color: "#4e98f444" }),
+                            // stroke: new Stroke({
+                            //     width: 3,
+                            //     color: [71, 137, 227, 1]
+                            // })
                         })
                     );
                     features.push(routeFeature3);
@@ -135,16 +133,16 @@ export default {
                     // 图层
                     new TileLayer({
                         // 这里定义的是平铺图层
-                        // source: new OSM(),
-                        source: new XYZ({
-                            url: "http://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineStreetPurplishBlue/MapServer/tile/{z}/{y}/{x}",
-                        }),
+                        source: new OSM(),
+                        // source: new XYZ({
+                        //     url: "http://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineStreetPurplishBlue/MapServer/tile/{z}/{y}/{x}",
+                        // }),
 
                     }),
                 ],
                 view: new View({
                     projection: "EPSG:4326",
-                    center: [118.792207, 32.133476],
+                    center: [104.792207, 35.133476],
                     zoom: 5,
                 }),
             });

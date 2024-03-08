@@ -2,8 +2,8 @@
     <div class="map-wrap relative">
         <div id="Map" ref="map" class="map"></div>
         <div
-            class="w-[180px] btns absolute left-[20px] top-[50%] translate-y-[-50%]  bg-white flex flex-wrap space-between p-4 rounded ">
-            <button class="btn  flex-[48%] btn-outline mb-5 btn-sm" size="mini" mini
+            class=" w-[180px] btns absolute left-[20px] top-[50%] translate-y-[-50%]  bg-white flex flex-wrap space-between p-4 rounded ">
+            <button class="btn ease-out duration-300  flex-[48%] btn-outline mb-5 btn-sm" size="mini" mini
                 @click="btnClick('Left')">左移</button>
             <button class="btn flex-[48%] btn-outline btn-primary mb-5 btn-sm" @click="btnClick('Right')">右移</button>
             <button class="btn flex-[50%] btn-outline btn-secondary mb-5 btn-sm" @click="btnClick('Up')">上移</button>
