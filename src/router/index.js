@@ -58,10 +58,15 @@ const routes = [
         name: "province",
         component: () => import("../views/province.vue"),
       },
+      // {
+      //   path: "/openlayers/path",
+      //   name: "path",
+      //   component: () => import("../views/path.vue"),
+      // },
       {
-        path: "/openlayers/path",
+        path: "/openlayers/path-province",
         name: "path",
-        component: () => import("../views/path.vue"),
+        component: () => import("../views/openlayers/pathProvince.vue"),
       },
       
     ],

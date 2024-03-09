@@ -14,8 +14,11 @@ import {
   Icon
 } from 'ol/style';
 
-import qidian from '../assets/img/qidian.png'
-import zhongdian from '../assets/img/zhongdian.png'
+import qidian from '@/assets/img/qidian.png'
+import zhongdian from '@/assets/img/zhongdian.png'
+
+
+console.log(qidian)
 
 const map = ref(null) // 存放地图实例
 
@@ -27,8 +30,8 @@ function initMap() {
       new TileLayer({                      // 使用瓦片渲染方法
         source: new OSM()                  // 图层数据源
       }),
-      clusters,
-      lineVectorLayer
+      lineVectorLayer,
+      clusters
     ],
     view: new View({                       // 地图视图
       projection: "EPSG:4326",             // 坐标系，有EPSG:4326和EPSG:3857
@@ -37,6 +40,12 @@ function initMap() {
       zoom: 11                            // 地图缩放级别（打开页面时默认级别）
     })
   })
+
+  map.value
+        .getView()
+        .fit(new Polygon([coordinates2]), {
+          padding: [200, 200, 200, 400],
+        }); //
 }
 
 
@@ -91,36 +100,42 @@ const clusters = new VectorLayer({
 });
 
 let lineVectorLayer = null
+let coordinates2= [
+  [113.85,34.70],
+  [113.92,34.70],
+  [113.92,34.72],
+  [113.82,34.74]
+]
 function createTrack() {
   const routeFeature = new Feature({
     type: 'route',
-    geometry: new LineString(coordinates).transform("EPSG:4326", "EPSG:3857"),
+    geometry: new LineString(coordinates2)
   })
-  console.log(routeFeature)
   const startMaker = new Feature({
     type: "startMarker",
-    geometry: new Point(coordinates[0]).transform("EPSG:4326", "EPSG:3857"),
+    geometry: new Point(coordinates2[0])
   })
 
   const endMaker = new Feature({
-    type: "startMarker",
-    geometry: new Point(coordinates[coordinates.length - 1]).transform("EPSG:4326", "EPSG:3857"),
+    type: "endMarker",
+    geometry: new Point(coordinates2[coordinates2.length - 1])
   })
 
   const styles = {
     route: new Style({
       stroke: new Stroke({
-        width: 2,
-        color: "#ffc641"
+        width: 5,
+        color: "red"
       })
     }),
-    startMaker: new Style({
+    startMarker: new Style({
       image: new Icon({
         src: qidian,
-        anchor: [0.5, 1.1]
-      })
+        // size: [80, 80],
+        anchor: [0.5, 1.1],
+      }),
     }),
-    endMaker: new Style({
+    endMarker: new Style({
       image: new Icon({
         src: zhongdian,
         anchor: [0.5, 1.1]

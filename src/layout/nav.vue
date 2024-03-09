@@ -44,9 +44,13 @@ let routerArr = reactive([
                 name: "geojson",
                 path: "/openlayers/geojson"
             },
+            // {
+            //     name: "地图轨迹",
+            //     path: "/openlayers/path"
+            // },
             {
-                name: "地图轨迹",
-                path: "/openlayers/path"
+                name: "出去玩（省内版）",
+                path: "/openlayers/path-province"
             }
         ]
     },
