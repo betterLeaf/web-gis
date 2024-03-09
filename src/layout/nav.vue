@@ -49,7 +49,7 @@ let routerArr = reactive([
             //     path: "/openlayers/path"
             // },
             {
-                name: "出去玩（省内版）",
+                name: "出去玩（全国版）",
                 path: "/openlayers/path-province"
             }
         ]
