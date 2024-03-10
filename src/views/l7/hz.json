@@ -1,0 +1,44 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "height": 10,
+                "name": "森林公园",
+                "w": 0
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [120.213539, 30.345036]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "height": 20,
+                "name": "杭州东站",
+                "w": 1
+
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [120.227271, 30.285761]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "height": 30,
+                "name": "余杭区",
+                "w": 2
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [119.997932, 30.258482]
+            }
+        }
+    ]
+}

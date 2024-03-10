@@ -59,8 +59,16 @@ let routerArr = reactive([
         name: "l7",
         children: [
             {
-                name: "l7",
+                name: "天气",
                 path: "/l7/init"
+            },
+            {
+                name: "line",
+                path: "/l7/line"
+            },
+            {
+                name: "windlayer",
+                path: "/l7/windlayer"
             },
         ]
     },

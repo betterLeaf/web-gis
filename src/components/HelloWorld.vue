@@ -37,7 +37,7 @@ function initMap() {
       projection: "EPSG:4326",             // 坐标系，有EPSG:4326和EPSG:3857
       center: [113.78,34.76],     // 郑州坐标
       minZoom: 4,                          // 地图缩放最小级别
-      zoom: 11                            // 地图缩放级别（打开页面时默认级别）
+      zoom: 4                            // 地图缩放级别（打开页面时默认级别）
     })
   })
 

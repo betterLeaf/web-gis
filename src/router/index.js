@@ -34,6 +34,16 @@ const routes = [
         name: "l7-init",
         component: () => import("../views/l7/init.vue"),
       },
+      {
+        path: "/l7/line",
+        name: "l7-line",
+        component: () => import("../views/l7/line.vue"),
+      },
+      {
+        path: "/l7/windlayer",
+        name: "l7-windlayer",
+        component: () => import("../views/l7/windlayer.vue"),
+      },
     ]
   },
 
