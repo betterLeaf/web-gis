@@ -33,6 +33,10 @@ function initMap() {
             zoom: 4.9,
         })
     })
+
+    map.value.once('postrender', e => {
+        console.log('地图加载完成')
+    })
 }
 
 // 绘制
@@ -126,7 +130,6 @@ function nextPoint() {
     let p2 = map.value.getPixelFromCoordinate(
         fromLonLat(initData.carPoints[routeIndex + 1])
     );
-    console.log(initData.carPoints[routeIndex], p1)
     let dx = p2[0] - p1[0];
     let dy = p2[1] - p1[1];
     let distance = Math.sqrt(dx * dx + dy * dy);

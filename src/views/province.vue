@@ -132,11 +132,9 @@ export default {
                 layers: [
                     // 图层
                     new TileLayer({
-                        // 这里定义的是平铺图层
-                        source: new OSM(),
-                        // source: new XYZ({
-                        //     url: "http://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineStreetPurplishBlue/MapServer/tile/{z}/{y}/{x}",
-                        // }),
+                        source: new XYZ({
+                            url: "http://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineStreetPurplishBlue/MapServer/tile/{z}/{y}/{x}",
+                        }),
 
                     }),
                 ],

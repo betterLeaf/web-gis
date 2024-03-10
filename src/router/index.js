@@ -22,6 +22,22 @@ const routes = [
       }
     ]
   },
+
+
+  {
+    path: "/l7",
+    name: "l7",
+    redirect: "/l7/init",
+    children: [
+      {
+        path: "/l7/init",
+        name: "l7-init",
+        component: () => import("../views/l7/init.vue"),
+      },
+    ]
+  },
+
+
   {
     path: "/openlayers",
     name: "openlayers",
