@@ -6,13 +6,12 @@
 import "ol/ol.css";
 import { ref, onMounted, reactive } from "vue";
 import { View, Map, Feature } from 'ol';
-import XYZ from "ol/source/XYZ";
 import { Tile as TileLayer, Vector as VectorLayer } from "ol/layer";
-import VectorSource from "ol/source/Vector";
+import { Vector as VectorSource, XYZ }  from "ol/source";
 import { Style, Fill, Stroke, Circle as sCircle, Icon } from "ol/style";
 import { LineString, Point } from "ol/geom";
 import car from "@/assets/img/car.png";
-import { transform, fromLonLat, toLonLat } from "ol/proj";
+import { transform, fromLonLat } from "ol/proj";
 
 let map = ref(null)
 // 初始化地图
@@ -169,6 +168,9 @@ onMounted(() => {
 
 
 let coordinates = [
+    [91.118463,29.654471],
+    [100.185245,36.952865],
+    [109.282056,34.386299],
     [116.41,39.90], // 北京
     [116.41,39.90], // 保定
     [114.36,35.93], // 汤阴
