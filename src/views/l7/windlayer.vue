@@ -51,11 +51,11 @@ function initMap() {
     scene = new Scene({
         id: "map",
         map: new GaodeMap({
-            center: [113.73324, 34.812923],
+            center:[0, 40],
             style: 'dark',
-            zoom: 4,
+            zoom: 2,
             token: gd_token,
-            pitch: 0
+            pitch: 30
         })
     })
 

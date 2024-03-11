@@ -70,6 +70,10 @@ let routerArr = reactive([
                 name: "windlayer",
                 path: "/l7/windlayer"
             },
+          {
+            name: "综合案例",
+            path: "/l7/example1"
+          },
         ]
     },
 

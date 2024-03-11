@@ -44,6 +44,12 @@ const routes = [
         name: "l7-windlayer",
         component: () => import("../views/l7/windlayer.vue"),
       },
+      {
+        path: "/l7/example1",
+        name: "l7-example1",
+        component: () => import("../views/l7/example1.vue"),
+      },
+
     ]
   },
 

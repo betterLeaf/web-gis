@@ -48,7 +48,7 @@ function initMap() {
   scene = new Scene({
     id: 'map',
     map: new GaodeMap({
-      style: "dark",
+      style: "darkblue",
       center: [113.73324, 34.812923],
       pitch: 45,
       zoom: 13,
@@ -65,35 +65,35 @@ function initMap() {
 }
 function addWindLayer() {
   /* 5、风场 */
-const windLayer = new WindLayer({
-  name: "风场"
-})
-  .source(
-    'https://gw.alipayobjects.com/mdn/rms_23a451/afts/img/A*wcU8S5xMEDYAAAAAAAAAAAAAARQnAQ',
-    {
-      parser: {
-        type: 'image',
-        extent: [-180, -85, 180, 85]
+  const windLayer = new WindLayer({
+    name: "风场"
+  })
+    .source(
+      'https://gw.alipayobjects.com/mdn/rms_23a451/afts/img/A*wcU8S5xMEDYAAAAAAAAAAAAAARQnAQ',
+      {
+        parser: {
+          type: 'image',
+          extent: [-180, -85, 180, 85]
+        }
       }
-    }
-  )
-  .animate(true)
-  .style({
-    numParticles: 35535,
-    fadeOpacity: 0.9,
-    sizeScale: 1.3,
-    rampColors: {
-      0.0: '#3288bd',
-      0.1: '#66c2a5',
-      0.2: '#abdda4',
-      0.3: '#e6f598',
-      0.4: '#fee08b',
-      0.5: '#fdae61',
-      0.6: '#f46d43',
-      1.0: '#d53e4f'
-    }
-  });
-scene.addLayer(windLayer);
+    )
+    .animate(true)
+    .style({
+      numParticles: 35535,
+      fadeOpacity: 0.9,
+      sizeScale: 1.3,
+      rampColors: {
+        0.0: '#3288bd',
+        0.1: '#66c2a5',
+        0.2: '#abdda4',
+        0.3: '#e6f598',
+        0.4: '#fee08b',
+        0.5: '#fdae61',
+        0.6: '#f46d43',
+        1.0: '#d53e4f'
+      }
+    });
+  scene.addLayer(windLayer);
 }
 function addAriLineLayer() {
   let data = {
