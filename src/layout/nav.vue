@@ -89,6 +89,15 @@ let routerArr = reactive([
                 path: "/three/phone"
             },
         ]
-    }
+    },
+  {
+    name: "cesium",
+    children: [
+      {
+        name: "Demo1",
+        path: "/cesium/demo1"
+      },
+    ]
+  }
 ])
 </script>

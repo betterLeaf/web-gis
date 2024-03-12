@@ -25,6 +25,20 @@ const routes = [
 
 
   {
+    path: "/cesium",
+    name: "cesium",
+    redirect: "/cesium/demo1",
+    children: [
+      {
+        path: "/cesium/demo1",
+        name: "cesium-demo1",
+        component: () => import("../views/cesium/demo1.vue"),
+      },
+    ]
+  },
+
+
+  {
     path: "/l7",
     name: "l7",
     redirect: "/l7/init",
