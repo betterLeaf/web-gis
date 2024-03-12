@@ -7,7 +7,7 @@ let loader = new GLTFLoader()
 // 加载环境贴图
 let textureCube = new THREE.CubeTextureLoader()
     .setPath('/phoneModel/envMap/')
-    .load([`px.png`, `nx.png`, `py.png`, `ny.png`, `pz.png`, `nz.png`])
+    .load([`px.jpg`, `nx.jpg`, `py.jpg`, `ny.jpg`, `pz.jpg`, `nz.jpg`])
 
 loader.load("/phoneModel/手机.glb", gltf => {//gltf加载成功后返回一个对象
     model.add(gltf.scene)

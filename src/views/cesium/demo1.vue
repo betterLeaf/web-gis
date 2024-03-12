@@ -42,11 +42,7 @@ onMounted(() => {
     sceneModePicker: false,
     selectionIndicator: false,
     infoBox: false,
-    navigationHelpButton: false,
-    terrainProvider: new Cesium.TerrainProvider({
-      hasVertexNormals: true,
-      hasWaterMask: true
-    })
+    navigationHelpButton: false
   })
   // const Imagelayer = new Cesium.UrlTemplateImageryProvider({
   //   url: maps[1],
